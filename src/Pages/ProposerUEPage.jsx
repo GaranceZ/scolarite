@@ -33,7 +33,7 @@ const ProposerUEPage = () => {
     {proposerUE.map((propUE, index) => {
         return <Card style={{ width: '18rem' }} key={"propUE"+index}>
             <Card.Body>
-                <Card.Title className={'text-center'}>{propUE.eta_nom} {propUE.etu_prenom}</Card.Title>
+                <Card.Title className={'text-center'}>{propUE.eta_nom}</Card.Title>
                 <div className={'text-center'}>
                 <Link to={'/etablissement/'+ propUE.eta_id}><Button variant="primary">Voir Établissement</Button></Link>
                 </div>

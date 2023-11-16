@@ -13,6 +13,7 @@ const ProposerEtablissement = () => {
     const fetchProposerEtablissement = async () => {
         try{
             const response = await proposerService.fetchProposerEtablissement(id);
+            console.log(response.data);
             setProposerEtablissement(response.data);
         } catch(e){
             console.log(e);

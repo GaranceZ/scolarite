@@ -15,6 +15,11 @@ import SuivreUEPage from './Pages/SuivreUEPage';
 import Proposer from './Pages/Proposer';
 import ProposerEtablissement from './Pages/ProposerEtablissementPage';
 import ProposerUEPage from './Pages/ProposerUEPage';
+import CreateEtudiant from './Pages/CreateEtudiant';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import CreateFormateur from './Pages/CreateFormateur';
+import CreateUE from './Pages/CreateUE';
 
 function App() {
   return <>
@@ -34,8 +39,23 @@ function App() {
         <Route path={"/proposer"} element={<Proposer/>}/>
         <Route path={"/proposer/etablissement/:id"} element={<ProposerEtablissement/>}/>
         <Route path={"/proposer/ue/:id"} element={<ProposerUEPage/>}/>
+        <Route path={"/etudiant/create"} element={<CreateEtudiant/>}/>
+        <Route path={"/formateur/create"} element={<CreateFormateur/>}/>
+        <Route path={"/ue/create"} element={<CreateUE/>}/>
       </Routes>
     </BrowserRouter>
+    <ToastContainer
+          position="bottom-center"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="colored"
+/>
   </>;
 }
 
